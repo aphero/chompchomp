@@ -1,31 +1,34 @@
-<p id="notice"><%= notice %></p>
+<div id="container">
+  <p id="notice"><%= notice %></p>
 
-<h1>Welcome to Chomp Chomp's!</h1>
-<% @courses.each do |course| %>
+  <h1>Welcome to Chomp Chomp's!</h1>
+  <% @courses.each do |course| %>
+  <div id="course">
   <h1><%= course.name %></h1>
-  <%= link_to 'New', new_dish_path(:course_id => course.id) %>
-  <%= image_tag course.image %>
+    <%= image_tag course.image %>
+  <%= link_to 'Add item', new_dish_path(:course_id => course.id) %>
   <table>
     <thead>
       <tr>
         <th>Name</th>
         <th>Desc</th>
         <th>Price</th>
-        <th>Course</th>
         <th colspan="3"></th>
       </tr>
     </thead>
-
+    <div id="image">
+    </div>
     <tbody>
       <% @dishes.where(course_id: course.id).each do |dish| %>
-      <tr>
+      <tr id="items">
         <td><%= link_to dish.name, edit_dish_path(dish) %></td>
         <td><%= dish.desc %></td>
         <td><%= dish.price %></td>
-        <td><%= dish.course_id %></td>
         <td><%= link_to 'Show', dish %></td>
       </tr>
       <% end %>
     </tbody>
   </table>
-<% end %>
+</div>
+  <% end %>
+</div>

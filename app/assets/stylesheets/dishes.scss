@@ -1,3 +1,52 @@
 // Place all the styles related to the Dishes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$prim_color: #6F256F;
+$prim_color_light: #FFAAAA;
+$sec_color: #AA7939;
+$sec_color_light: #FFDBAA;
+
+#course {
+  height: 200px;
+  background-color: $sec_color_light;
+}
+#items td {
+  a {
+  text-decoration: none;
+  color: $prim_color;
+  }
+  a:hover {
+    color: $prim_color;
+    background-color: white;
+  }
+  a:link {
+    color: $sec_color;
+  }
+  a:visited {
+    color: $sec_color;
+  }
+}
+
+#container a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+body {
+  background-color: $sec_color_light;
+}
+
+// html, body, p, table, td, tr, h1, h2, h3 {
+//   border: 1px solid black;
+// }
+
+img {
+  width: 100px;
+  float: right;
+}
+
+#container {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}

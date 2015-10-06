@@ -13,11 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-html, body, p, table, td, tr, h1, h2, h3 {
-  border: 1px solid black;
-}
-
-img {
-  width:50px;
-}

@@ -3,8 +3,8 @@
 <h1>Welcome to Chomp Chomp's!</h1>
 <% @courses.each do |course| %>
   <h1><%= course.name %></h1>
-  <%= image_tag course.image %>
   <%= link_to 'New', new_dish_path(:course_id => course.id) %>
+  <%= image_tag course.image %>
   <table>
     <thead>
       <tr>
@@ -19,7 +19,7 @@
     <tbody>
       <% @dishes.where(course_id: course.id).each do |dish| %>
       <tr>
-        <td><%= dish.name %></td>
+        <td><%= link_to dish.name, edit_dish_path(dish) %></td>
         <td><%= dish.desc %></td>
         <td><%= dish.price %></td>
         <td><%= dish.course_id %></td>

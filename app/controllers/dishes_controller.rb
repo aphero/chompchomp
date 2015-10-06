@@ -9,6 +9,7 @@ class DishesController < ApplicationController
 
   # GET /dishes/1
   def show
+    redirect_to edit_dish_path
   end
 
   # GET /dishes/new
@@ -34,7 +35,7 @@ class DishesController < ApplicationController
   def update
     @dish = Dish.find_by_id(params[:id])
     @dish.update(name: params[:dish][:name])
-    render json: @dish
+    redirect_to dishes_path
   end
   # PATCH/PUT /dishes/1
   # def update

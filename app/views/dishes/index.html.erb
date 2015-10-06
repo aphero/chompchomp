@@ -3,6 +3,7 @@
 <h1>Welcome to Chomp Chomp's!</h1>
 <% @courses.each do |course| %>
   <h1><%= course.name %></h1>
+  <%= image_tag course.image %>
   <%= link_to 'New', new_dish_path(:course_id => course.id) %>
   <table>
     <thead>

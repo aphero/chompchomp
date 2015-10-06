@@ -6,7 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Course.create!(name: "Appetizer")
-Course.create!(name: "Side")
-Course.create!(name: "Entree")
-Course.create!(name: "Dessert")
+Course.create!(name: "Appetizer", image: "appetizers.jpg")
+Course.create!(name: "Side", image: "sides.jpg")
+Course.create!(name: "Entree", image: "entree.jpg")
+Course.create!(name: "Dessert", image: "desserts.jpg")
+Course.create!(name: "Cocktail", image: "cocktails.png")
